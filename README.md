@@ -1,5 +1,3 @@
-⚠️ Notice: We're currently facing an issue where this repository has exceeded its data quota. The account responsible for Git LFS bandwidth needs to purchase more data packs to restore access. As a result, you won't be able to clone the data or model file at the moment. We are looking at possible options for the future of Deaflingo currently so we have not paid for more storage or bandwidth yet. In the future we would run the model via an external server so this won't be an issue.
-
 # Deaflingo Local Setup
 
 Welcome to Deaflingo! This guide will walk you through the steps to set up and run the Deaflingo web application locally on your machine.
@@ -9,8 +7,6 @@ Welcome to Deaflingo! This guide will walk you through the steps to set up and r
 For a demonstration of Deaflingo in action, watch our video on YouTube:
 
 [![Deaflingo Demo Video](https://img.youtube.com/vi/7jd46k0xQxo/0.jpg)](https://youtu.be/7jd46k0xQxo)
-
-This was made for HackKU 2024 find the devpost link [here](https://devpost.com/software/deaflingo).
 
 ## Prerequisites
 
