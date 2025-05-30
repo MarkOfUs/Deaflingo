@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Responsive viewport for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the external CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <!-- Title of the webpage -->
+    <title>Deaflingo</title>
+
+    <!-- jQuery CDN for JavaScript functionality -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <!-- CDN for confetti effect -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script>
+</head>
+<body>
+
+<!-- Title section with Deaflingo logo -->
+<div class="title">
+    <img src="../images/Deaflingo_text.png" alt="Deaflingo Logo" class="logo">
+</div>
+
+<!-- Container for the word display -->
+<div class="wordcontainer">
+    <div class="word">
+        <!-- Words will be populated here -->
+    </div>
+</div>
+
+<!-- Main view section -->
+<div class="view">
+    <!-- Camera section -->
+    <div class="camera">
+        <!-- Camera display element -->
+        <img id="photoElement">
+        <!-- Video element for camera feed -->
+        <div style="display: none;">
+            <video id="videoElement" autoplay></video>
+        </div>    
+        <!-- Canvas element for drawing -->
+        <canvas id="canvasElement" style="display: none;"></canvas>
+
+        <!-- Form to send image data -->
+        <form id="sendImage" method="POST" action="/">
+            <input id="imageString" type="hidden" name="photo"/>
+        </form>
+        <!-- Script for camera functionality -->
+        <script src="{{url_for('static', filename='scripts/camera.js')}}"></script>
+        <!-- End of Camera section -->
+    </div>
+
+    <!-- Answer section -->
+    <div class="answer">
+        <!-- Flip card for displaying answer -->
+        <div id="flip-card" class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card-inner">
+              <!-- Front face of flip card -->
+              <div class="flip-card-front">
+                <!-- Green monkey move area section -->
+                <section class="green_monkey_move-area">
+                    <!-- Container for green monkey pondering -->
+                    <div class='green_monkey_ponder_container'>
+                        <!-- Display predicted character -->
+                        <div class='green_monkey_letter' font-size="64"><div id="predictedCharacter"></div></div>
+                    </div>
+                    <!-- Container for green monkey eyes -->
+                    <div class='green_monkey_container'>
+                        <div class='green_monkey_eye'></div>
+                        <div class='green_monkey_eye'></div>
+                    </div>
+                </section>
+                <!-- Script for monkey eyes animation -->
+                <script src="{{url_for('static', filename='scripts/monkeyeyes.js')}}"></script>
+              </div>
+              <!-- Back face of flip card -->
+              <div class="flip-card-back">
+                <!-- Image display for ASL character -->
+                <img src="..\images\green_asl_abc\A.png" alt="Avatar" style="width:600px">
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script for generating words -->
+<script src="{{url_for('static', filename='scripts/generatewords.js')}}"></script>
+
+</body>
+</html>

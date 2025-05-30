@@ -1,0 +1,238 @@
+/* Importing Roboto Mono font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* General body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+/* Styling for the title */
+.title {
+    flex-grow: .75;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Logo styling */
+.logo {
+    width: 400px;
+    height: auto;
+}
+
+/* Container for the word display */
+.wordcontainer {
+    flex-grow: .75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the displayed word */
+.word {
+    font-size: 5em;
+    font-family: 'Roboto Mono', monospace;
+    flex-grow: .75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the underline effect */
+.underline {
+    color: black;
+    margin-right: 0.2em;
+}
+
+/* Styling for the cursor animation */
+.cursor {
+    color: black;
+    animation: blink-animation 1s infinite;
+}
+
+/* Keyframes for the cursor blinking animation */
+@keyframes blink-animation {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Styling for the main view */
+.view {
+    display: flex;
+    flex-grow: 2.5;
+}
+
+/* Styling for the card in the green monkey move area */
+.green_monkey_move-area .card {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Flipped state styling for the card */
+.green_monkey_move-area .card.flip {
+    transform: rotateX(180deg);
+}
+
+/* Styling for the card faces */
+.green_monkey_move-area .card .face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background-size: contain;
+}
+
+/* Styling for the front face of the card */
+.green_monkey_move-area .card .front {
+    background-size: contain;
+}
+
+/* Styling for the back face of the card */
+.green_monkey_move-area .card .back {
+    background-size: contain;
+    transform: rotateY(180deg);
+}
+
+/* Styling for the camera and answer sections */
+.camera,
+.answer {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the header section */
+.header {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    background-color: #cdde87ff;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+}
+
+/* Styling for the photo element */
+#photoElement {
+    border-radius: 30px;
+    border: 5px solid #b6b6b6;
+}
+
+/* Styling for the footer */
+.footer {
+    padding: 10px;
+}
+
+/* Styling for the flip card */
+.flip-card {
+    background-color: transparent;
+    width: 600px;
+    height: 430px;
+    perspective: 1000px;
+}
+
+/* Styling for the inner part of the flip card */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Styling for the flipped state of the flip card */
+.flip-card.flipped .flip-card-inner {
+    transform: rotateX(180deg);
+}
+
+/* Styling for the front and back faces of the flip card */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Styling for the back face of the flip card */
+.flip-card-back {
+    transform: rotateX(180deg);
+}
+
+/* Styling for the green monkey move area */
+.green_monkey_move-area {
+    width: 600px; /* Adjust the width as needed */
+    height: 450px; /* Adjust the height as needed */
+    background: url('../../images/flashcard_top.png') no-repeat center center;
+    background-size: contain; /* Ensures the image is fully contained */
+    position: relative;
+}
+
+/* Styling for the green monkey letter */
+.green_monkey_letter {
+    font-size: 64px; /* Adjust the size as needed */
+    flex-grow: 2.5;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Styling for the green monkey ponder container */
+.green_monkey_ponder_container {
+    position: absolute;
+    top: 24%;
+    left: 23%;
+}
+
+/* Styling for the green monkey container */
+.green_monkey_container {
+    position: absolute;
+    top: 54%;
+    left: 73%;
+    transform: translate(-50%, -50%);
+}
+
+/* Styling for the green monkey eye */
+.green_monkey_eye {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    height: 40px; /* Adjust the eye size as needed */
+    width: 29px; /* Adjust the eye size as needed */
+}
+
+/* Styling for the inner part of the green monkey eye */
+.green_monkey_eye:after {
+    position: absolute;
+    bottom: 7px; /* Adjust the position of the eye as needed */
+    right: 4px; /* Adjust the position of the eye as needed */
+    width: 15px; /* Adjust the eye size as needed */
+    height: 15px; /* Adjust the eye size as needed */
+    background: #515152ff;
+    border-radius: 50%;
+    content: " ";
+}
+
+/* Styling for the word containers within the word container */
+.wordcontainer .word div {
+    display: inline-block;
+    margin-right: 35px; /* Adjust the value to increase or decrease space */
+}
+
+/* Styling to reduce font size to half */
+.half-size {
+    font-size: 50%;
+}
