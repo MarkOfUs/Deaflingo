@@ -8,6 +8,8 @@ For a demonstration of Deaflingo in action, watch our video on YouTube:
 
 [![Deaflingo Demo Video](https://img.youtube.com/vi/7jd46k0xQxo/0.jpg)](https://youtu.be/7jd46k0xQxo)
 
+This was made for HackKU 2024 find the devpost link [here](https://devpost.com/software/deaflingo).
+
 ## Prerequisites
 
 - Python 3.11.x installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
