@@ -10,18 +10,17 @@
     <!-- Title of the webpage -->
     <title>Deaflingo</title>
 
-    <!-- jQuery CDN for JavaScript functionality -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-            crossorigin="anonymous"></script>
     <!-- CDN for confetti effect -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.0.1"></script>
 </head>
 <body>
+<script>
+    window.ASL_IMAGE_BASE = "{{ url_for('static_proxy', path='green_asl_abc') }}";
+</script>
 
 <!-- Title section with Deaflingo logo -->
 <div class="title">
-    <img src="../images/Deaflingo_text.png" alt="Deaflingo Logo" class="logo">
+    <img src="{{ url_for('static_proxy', path='Deaflingo_text.png') }}" alt="Deaflingo Logo" class="logo">
 </div>
 
 <!-- Container for the word display -->
@@ -43,11 +42,6 @@
         </div>    
         <!-- Canvas element for drawing -->
         <canvas id="canvasElement" style="display: none;"></canvas>
-
-        <!-- Form to send image data -->
-        <form id="sendImage" method="POST" action="/">
-            <input id="imageString" type="hidden" name="photo"/>
-        </form>
         <!-- Script for camera functionality -->
         <script src="{{url_for('static', filename='scripts/camera.js')}}"></script>
         <!-- End of Camera section -->
@@ -79,7 +73,7 @@
               <!-- Back face of flip card -->
               <div class="flip-card-back">
                 <!-- Image display for ASL character -->
-                <img src="..\images\green_asl_abc\A.png" alt="Avatar" style="width:600px">
+                <img src="{{ url_for('static_proxy', path='green_asl_abc/A.png') }}" alt="Avatar" style="width:600px">
               </div>
             </div>
         </div>

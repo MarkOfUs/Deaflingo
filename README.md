@@ -8,7 +8,7 @@ Deaflingo is a sign language learning web application built with Python, Flask, 
 
 ## Overview
 
-Deaflingo enables interactive sign language practice through webcam-based gesture recognition and real-time prediction feedback in the browser. The application captures webcam frames, sends them to the back end for hand-gesture inference, and returns predictions to create an accessible, interactive learning experience.
+Deaflingo enables interactive sign language practice through webcam-based gesture recognition and real-time prediction feedback in the browser. The application captures webcam frames, sends them to the back end for hand-gesture inference, and returns predictions to create an accessible, interactive learning experience. Inference uses MediaPipe Hands landmarks, converts them into normalized x/y coordinate features, and classifies letters with a scikit-learn RandomForestClassifier.
 
 ## Features
 
@@ -28,26 +28,27 @@ Deaflingo enables interactive sign language practice through webcam-based gestur
 
 ## Running Locally
 
-1. Clone the repository.
-2. Install the dependencies:
+1. Use **Python 3.11**.
+2. Install [Git LFS](https://git-lfs.com/) and run:
+
+```bash
+git lfs install
+```
+
+3. Clone the repository.
+4. Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
-````
-
-On macOS:
-
-```bash
-pip install -r requirements-mac.txt
 ```
 
-3. Start the app:
+5. Start the app:
 
 ```bash
 python app.py
 ```
 
-4. Open `http://127.0.0.1:8001/` in your browser.
+6. Open `http://127.0.0.1:8001/` in your browser.
 
 You should see:
 
