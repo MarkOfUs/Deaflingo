@@ -1,6 +1,6 @@
 # Deaflingo
 
-Deaflingo is a sign language learning web application built with Python, Flask, HTML/CSS/JavaScript, and browser-backend HTTP requests.
+Deaflingo is a sign language learning web application built with Python, Flask, HTML/CSS/JavaScript, and browser-to-backend HTTP requests.
 
 ## Demo
 
@@ -8,14 +8,14 @@ Deaflingo is a sign language learning web application built with Python, Flask, 
 
 ## Overview
 
-Deaflingo enables interactive sign language practice through webcam-based gesture recognition and real-time prediction feedback in the browser. The application processes webcam frames on the back end, runs hand-gesture inference, and returns predictions to support an accessible, interactive learning experience.
+Deaflingo enables interactive sign language practice through webcam-based gesture recognition and real-time prediction feedback in the browser. The application captures webcam frames, sends them to the back end for hand-gesture inference, and returns predictions to create an accessible, interactive learning experience.
 
 ## Features
 
 - Interactive sign language practice in the browser
 - Webcam-based hand gesture recognition
 - Real-time prediction feedback
-- Flask web app with browser-backend HTTP communication
+- Flask web application with browser-to-backend HTTP communication
 
 ## Tech Stack
 
@@ -29,28 +29,27 @@ Deaflingo enables interactive sign language practice through webcam-based gestur
 ## Running Locally
 
 1. Clone the repository.
-
-2. Install the required dependencies:
+2. Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ````
 
-On macOS, use:
+On macOS:
 
 ```bash
 pip install -r requirements-mac.txt
 ```
 
-3. Start the application:
+3. Start the app:
 
 ```bash
 python app.py
 ```
 
-4. Open your browser to `http://127.0.0.1:8001/`.
+4. Open `http://127.0.0.1:8001/` in your browser.
 
-The Flask development server should display output similar to:
+You should see:
 
 ```bash
 * Running on http://127.0.0.1:8001/ (Press CTRL+C to quit)
