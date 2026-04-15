@@ -1,73 +1,57 @@
-# Deaflingo Local Setup
+# Deaflingo
 
-Welcome to Deaflingo! This guide will walk you through the steps to set up and run the Deaflingo web application locally on your machine.
+Deaflingo is a sign language learning web application built with Python, Flask, HTML/CSS/JavaScript, and browser-backend HTTP requests.
 
 ## Demo
 
-For a demonstration of Deaflingo in action, watch our video on YouTube:
-
 [![Deaflingo Demo Video](https://img.youtube.com/vi/7jd46k0xQxo/0.jpg)](https://youtu.be/7jd46k0xQxo)
 
-This was made for HackKU 2024 find the devpost link [here](https://devpost.com/software/deaflingo).
+## Overview
 
-## Prerequisites
+Deaflingo enables interactive sign language practice through webcam-based gesture recognition and real-time prediction feedback in the browser. The application processes webcam frames on the back end, runs hand-gesture inference, and returns predictions to support an accessible, interactive learning experience.
 
-- Python 3.11.x installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
-  
-- Git LFS installed. Follow the steps below to install Git LFS:
-  - Install [Git LFS](https://git-lfs.com/).
-  - Set up Git LFS for your user account by running: `git lfs install`.
+## Features
 
-## Setup Instructions
+- Interactive sign language practice in the browser
+- Webcam-based hand gesture recognition
+- Real-time prediction feedback
+- Flask web app with browser-backend HTTP communication
 
-1. Clone or download this repository to your local machine.
+## Tech Stack
 
-2. Navigate to the project directory using the command line.
+- Python
+- Flask
+- OpenCV
+- NumPy
+- scikit-learn
+- HTML, CSS, JavaScript
 
-3. Install the required dependencies by running the following command:
+## Running Locally
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+1. Clone the repository.
 
-    If you're on a macOS system, use the following command instead:
+2. Install the required dependencies:
 
-    ```bash
-    pip install -r requirements-mac.txt
-    ```
+```bash
+pip install -r requirements.txt
+````
 
-    This command will recursively install all the dependencies required for the Deaflingo web app.
+On macOS, use:
 
-    **Note:** Ensure that "pip" corresponds to your Python 3.11.x installation.
+```bash
+pip install -r requirements-mac.txt
+```
 
-## Running the Application
+3. Start the application:
 
-1. Once all the dependencies are installed, you can start the Deaflingo web app by running the following command:
+```bash
+python app.py
+```
 
-    **Note:** Ensure that "python" corresponds to your Python 3.11.x installation.
+4. Open your browser to `http://127.0.0.1:8001/`.
 
-    ```bash
-    python app.py
-    ```
+The Flask development server should display output similar to:
 
-2. After executing the above command, the Flask development server will start running. You should see output similar to the following:
-
-    ```bash
-    * Running on http://127.0.0.1:8001/ (Press CTRL+C to quit)
-    ```
-
-3. Open your web browser and navigate to [http://127.0.0.1:8001/](http://127.0.0.1:8001/).
-
-4. You should now see the home page of the Deaflingo web app, where you can interact with its features.
-
-## Stopping the Application
-
-To stop the Flask development server, press `CTRL+C` in the command line where the server is running. This will stop the server and free up the port.
-
-## Additional Notes
-
-- Make sure no other application is using port 8001 on your system to avoid conflicts with the Flask development server.
-
-- It's recommended to use a virtual environment for Python projects to manage dependencies and avoid conflicts with system-wide packages. You can create and activate a virtual environment using `venv` or `virtualenv` as per your preference.
-
-- If you encounter any issues during setup or running the application, feel free to reach out for assistance.
+```bash
+* Running on http://127.0.0.1:8001/ (Press CTRL+C to quit)
+```
