@@ -35,7 +35,13 @@ Deaflingo enables interactive sign language practice through webcam-based gestur
 git lfs install
 ```
 
-3. Clone the repository.
+3. Clone the repository:
+
+```bash
+git clone https://github.com/MarkOfUs/Deaflingo.git
+cd Deaflingo
+```
+
 4. Install the dependencies:
 
 ```bash
