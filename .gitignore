@@ -1,3 +1,5 @@
 *.jpg
 *.pyc
 .DS_Store
+model.p
+data.pickle

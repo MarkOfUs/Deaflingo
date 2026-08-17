@@ -5,9 +5,11 @@ import base64
 import pickle
 import mediapipe as mp
 
+from assets import ensure_asset
+
 app = Flask(__name__)
 
-model_dict = pickle.load(open('./model.p', 'rb'))
+model_dict = pickle.load(open(ensure_asset('model.p'), 'rb'))
 model = model_dict['model']
 
 mp_hands = mp.solutions.hands

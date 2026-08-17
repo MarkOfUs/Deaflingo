@@ -29,32 +29,28 @@ Deaflingo enables interactive sign language practice through webcam-based gestur
 ## Running Locally
 
 1. Use **Python 3.11**.
-2. Install [Git LFS](https://git-lfs.com/) and run:
-
-```bash
-git lfs install
-```
-
-3. Clone the repository:
+2. Clone the repository:
 
 ```bash
 git clone https://github.com/MarkOfUs/Deaflingo.git
 cd Deaflingo
 ```
 
-4. Install the dependencies:
+3. Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-5. Start the app:
+4. Start the app:
 
 ```bash
 python app.py
 ```
 
-6. Open `http://127.0.0.1:8001/` in your browser.
+The trained model (`model.p`, ~170MB) is downloaded automatically from [GitHub Releases](https://github.com/MarkOfUs/Deaflingo/releases/tag/model-v1) on first run. The training dataset (`data.pickle`) is also available there if you want to retrain.
+
+5. Open `http://127.0.0.1:8001/` in your browser.
 
 You should see:
 
